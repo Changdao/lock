@@ -7,7 +7,7 @@ export default class Connector extends LockConnector {
     let provider;
     try {
       const Fortmatic = (await get()).default;
-      const fm: any = new Fortmatic(this.options.apiKey);
+      const fm = new Fortmatic(this.options.apiKey);
       provider = await fm.getProvider();
       await fm.user.login();
       const isLoggedIn = await fm.user.isLoggedIn();

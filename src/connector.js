@@ -1,7 +1,7 @@
 export default class Connector {
-  public options: any;
+  options;
 
-  constructor(options: string) {
+  constructor(options) {
     this.options = options;
   }
 
@@ -9,11 +9,11 @@ export default class Connector {
     return;
   }
 
-  logout(): any {
+  logout() {
     return true;
   }
 
-  async isLoggedIn(): Promise<boolean> {
+  async isLoggedIn(){
     return true;
   }
 }

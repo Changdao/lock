@@ -44,7 +44,7 @@ export const useLock = ({ ...options }) => {
         }
       },
       async getConnector() {
-        const connector: any = localStorage.getItem(`_${name}.connector`);
+        const connector = localStorage.getItem(`_${name}.connector`);
         if (connector) {
           // @ts-ignore
           const lockConnector = this.lockClient.getConnector(connector);

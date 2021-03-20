@@ -1,15 +1,15 @@
 import Connector from './connector';
 
 export default class Lock {
-  public connectors = {};
-  public options = {};
+  connectors = {};
+  options = {};
 
-  addConnector(connector: any) {
+  addConnector(connector) {
     this.connectors[connector.key] = connector.connector;
     this.options[connector.key] = connector.options;
   }
 
-  getConnector(key: string): Connector {
+  getConnector(key) {
     const options = this.options[key];
     return new this.connectors[key](options);
   }
